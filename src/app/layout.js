@@ -1,5 +1,6 @@
 import ScrollLinked from "./components/ScrollLinked";
 import localFont from "next/font/local";
+import Carousel from "./components/Carousel";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -16,6 +17,9 @@ const geistMono = localFont({
 export const metadata = {
   title: "Tomiwa Aluko",
   description: "Student ePortfolio Website for Tomiwa Aluko",
+  icons: {
+    icon: "/Logo2Better.png",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -26,6 +30,10 @@ export default function RootLayout({ children }) {
       >
         <ScrollLinked />
         {children}
+        <div style={{ marginTop: "100px", marginBottom: "100px" }}>
+          <Carousel />{" "}
+          {/* Places the carousel between Project and Email sections */}
+        </div>
       </body>
     </html>
   );
