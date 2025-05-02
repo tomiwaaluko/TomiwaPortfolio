@@ -1,13 +1,33 @@
 "use client";
-import React from "react";
-import dynamic from "next/dynamic";
+import React, { useState, useEffect } from "react";
 
-const AnimatedNumbers = dynamic(
-  () => {
-    return import("react-animated-numbers");
-  },
-  { ssr: false }
-);
+// Custom implementation to replace the missing react-animated-numbers package
+const AnimatedCounter = ({ value, className }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const animationDuration = 2000; // 2 seconds
+    const frameDuration = 1000 / 60; // 60fps
+    const totalFrames = Math.round(animationDuration / frameDuration);
+    let frame = 0;
+
+    const counter = setInterval(() => {
+      frame++;
+      const progress = frame / totalFrames;
+      const currentCount = Math.round(value * Math.min(progress, 1));
+
+      setCount(currentCount);
+
+      if (frame === totalFrames) {
+        clearInterval(counter);
+      }
+    }, frameDuration);
+
+    return () => clearInterval(counter);
+  }, [value]);
+
+  return <span className={className}>{count}</span>;
+};
 
 const achievementsList = [
   {
@@ -36,22 +56,14 @@ const AchievementsSection = () => {
       <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
         {achievementsList.map((achievement, index) => (
           <div
-            key={`achievement_${index}`} // Ensure a unique key for each item
+            key={`achievement_${index}`}
             className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
           >
             <h2 className="text-white text-4xl font-bold flex flex-row">
               {achievement.prefix}
-              <AnimatedNumbers
-                key={`animated_number_${achievement.metric}`} // Unique key for AnimatedNumbers
-                includeComma
-                animateToNumber={parseInt(achievement.value, 10)}
-                locale="en-US"
+              <AnimatedCounter
+                value={parseInt(achievement.value, 10)}
                 className="text-white text-4xl font-bold"
-                configs={(_, i) => ({
-                  mass: 1,
-                  friction: 100,
-                  tensions: 140 * (i + 1),
-                })}
               />
               {achievement.postfix}
             </h2>
