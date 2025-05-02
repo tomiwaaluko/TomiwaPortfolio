@@ -6,6 +6,17 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const HeroSection = () => {
+  const handleHireMeClick = (e) => {
+    e.preventDefault();
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      window.scrollTo({
+        top: contactSection.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -48,6 +59,7 @@ const HeroSection = () => {
           <div>
             <Link
               href="/#contact"
+              onClick={handleHireMeClick}
               className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-amber-700 via-orange-400 to-orange-300 hover:bg-slate-200 text-white"
             >
               Hire Me

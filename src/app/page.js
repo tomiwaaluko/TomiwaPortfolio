@@ -2,8 +2,7 @@ import Image from "next/image";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import AboutSection from "./components/AboutSection";
-import ProjectSection from "./components/ProjectSection";
-import ScrollLinked from "./components/ScrollLinked"; // Import ScrollLinked component
+import ProjectSection from "./components/ProjectSection"; // Add this import
 import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
 import AchievementsSection from "./components/AchievementsSection";
@@ -17,10 +16,6 @@ export default function Home() {
         <AchievementsSection />
         <AboutSection />
         <ProjectSection />
-
-        {/* Add ScrollLinked Component Below Projects Section */}
-        <ScrollLinked />
-
         <EmailSection />
       </div>
       <Footer />

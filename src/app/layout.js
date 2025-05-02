@@ -1,6 +1,5 @@
 import ScrollLinked from "./components/ScrollLinked";
 import localFont from "next/font/local";
-import Carousel from "./components/Carousel";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -30,10 +29,6 @@ export default function RootLayout({ children }) {
       >
         <ScrollLinked />
         {children}
-        <div style={{ marginTop: "100px", marginBottom: "100px" }}>
-          <Carousel />{" "}
-          {/* Places the carousel between Project and Email sections */}
-        </div>
       </body>
     </html>
   );
