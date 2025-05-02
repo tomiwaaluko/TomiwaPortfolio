@@ -57,10 +57,18 @@ const EmailSection = () => {
           free to reach out to me.
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
+          <Link
+            href="https://github.com/tomiwaaluko"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="linkedin.com">
+          <Link
+            href="https://www.linkedin.com/in/olatomiwaaluko/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>
