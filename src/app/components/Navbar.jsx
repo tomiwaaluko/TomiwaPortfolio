@@ -22,7 +22,6 @@ const Navbar = () => {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
-        setIsMenuOpen(false); // Close menu when scrolling back up
       }
     };
 
@@ -30,14 +29,13 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Function to handle smooth scrolling to sections
   const handleScrollToSection = (id) => {
     setActiveTab(id);
-    setIsMenuOpen(false); // Close menu after clicking a section
+    setIsMenuOpen(false);
     const section = document.getElementById(id);
     if (section) {
       window.scrollTo({
-        top: section.offsetTop - 50, // Adjust for navbar height
+        top: section.offsetTop - 50,
         behavior: "smooth",
       });
     }
@@ -45,7 +43,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Full Navbar - Transitions out when scrolling down */}
+      {/* Full Navbar - Transitions out when scrolling down on large screens only */}
       <motion.nav
         initial={{ y: 0, opacity: 1 }}
         animate={{ y: isScrolled ? -100 : 0, opacity: 1 }}
@@ -56,45 +54,49 @@ const Navbar = () => {
           {/* Logo or Title */}
           <h1 className="text-white text-2xl font-bold">Tomiwa</h1>
 
-          {/* Full Navbar - Only visible when NOT scrolled */}
-          {!isScrolled && (
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="hidden md:flex space-x-6"
-            >
-              {tabs.map((tab) => (
-                <div
-                  key={tab.id}
-                  className="relative cursor-pointer px-4 py-2 text-lg font-medium"
-                  onClick={() => handleScrollToSection(tab.id)}
-                >
-                  {activeTab === tab.id && (
-                    <motion.div
-                      layoutId="activeTab"
-                      className="absolute inset-0 bg-primary-500 rounded-lg"
-                      transition={{
-                        type: "spring",
-                        stiffness: 300,
-                        damping: 30,
-                      }}
-                    />
-                  )}
-                  <span className="relative z-10 text-white">{tab.name}</span>
-                </div>
-              ))}
-            </motion.div>
-          )}
+          {/* Desktop navigation */}
+          <div className="hidden md:flex space-x-6">
+            {tabs.map((tab) => (
+              <div
+                key={tab.id}
+                className="relative cursor-pointer px-4 py-2 text-lg font-medium group"
+                onClick={() => handleScrollToSection(tab.id)}
+              >
+                {activeTab === tab.id && (
+                  <motion.div
+                    layoutId="activeTab"
+                    className="absolute inset-0 bg-primary-500 rounded-lg"
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 30,
+                    }}
+                  />
+                )}
+                <span className="relative z-10 text-white group-hover:text-black">
+                  {tab.name}
+                </span>
+                <span className="absolute inset-0 rounded-lg bg-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></span>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile hamburger button (always visible on small screens) */}
+          <button
+            className="md:hidden text-white text-3xl"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <FiX /> : <FiMenu />}
+          </button>
         </div>
       </motion.nav>
 
-      {/* Fixed Hamburger Icon - Appears when scrolling down */}
+      {/* Fixed Hamburger Icon - Only appears when scrolled on large screens */}
       <motion.button
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: isScrolled ? 1 : 0, scale: isScrolled ? 1 : 0.8 }}
         transition={{ duration: 0.3 }}
-        className={`fixed top-4 right-6 z-50 text-white text-3xl md:hidden`}
+        className={`fixed top-4 right-6 z-50 text-white text-3xl hidden md:block`}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         {isMenuOpen ? <FiX /> : <FiMenu />}
@@ -107,13 +109,13 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="fixed top-12 right-6 bg-black text-white flex flex-col items-center space-y-4 py-4 px-6 rounded-lg shadow-lg"
+            className="fixed top-16 right-4 bg-black text-white flex flex-col items-center space-y-4 py-4 px-6 rounded-lg shadow-lg z-50"
           >
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => handleScrollToSection(tab.id)}
-                className="text-white text-lg hover:text-orange-400 transition"
+                className="text-white text-lg hover:text-black hover:bg-amber-500 transition-colors duration-300 px-4 py-2 rounded-lg w-full"
               >
                 {tab.name}
               </button>

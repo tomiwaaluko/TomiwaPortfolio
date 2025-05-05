@@ -17,6 +17,16 @@ const HeroSection = () => {
     }
   };
 
+  const handleDownload = () => {
+    // Create a link to the resume file
+    const link = document.createElement("a");
+    link.href = "/assets/Olatomiwa_Aluko_Resume.pdf";
+    link.download = "Olatomiwa_Aluko_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -64,14 +74,14 @@ const HeroSection = () => {
             >
               Hire Me
             </Link>
-            <Link
-              href="/"
+            <button
+              onClick={handleDownload}
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-amber-700 via-orange-400 to-orange-300 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 Download Resume
               </span>
-            </Link>
+            </button>
           </div>
         </motion.div>
         <motion.div
