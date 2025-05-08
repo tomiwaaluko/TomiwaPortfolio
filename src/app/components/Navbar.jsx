@@ -38,7 +38,19 @@ const Navbar = () => {
         top: section.offsetTop - 50,
         behavior: "smooth",
       });
+    } else {
+      console.error(`Section with id ${id} not found`);
     }
+  };
+
+  // Update dropdown menu positioning based on screen size and scroll state
+  const getDropdownPosition = () => {
+    // On mobile (or when hamburger menu from main nav is clicked)
+    if (window.innerWidth < 768) {
+      return "top-16";
+    }
+    // On desktop when scrolled (hamburger appears in corner)
+    return "top-16";
   };
 
   return (
@@ -109,7 +121,7 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="fixed top-16 right-4 bg-black text-white flex flex-col items-center space-y-4 py-4 px-6 rounded-lg shadow-lg z-50"
+            className={`fixed ${getDropdownPosition()} right-4 bg-black text-white flex flex-col items-center space-y-4 py-4 px-6 rounded-lg shadow-lg z-50`}
           >
             {tabs.map((tab) => (
               <button
