@@ -129,13 +129,16 @@ const EmailSection = () => {
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                 placeholder="Let's talk about..."
               />
+            </div>{" "}
+            <div className="relative group w-full">
+              <button
+                type="submit"
+                className="text-white font-medium py-2.5 px-5 rounded-lg w-full relative z-10 group-hover:text-black"
+              >
+                Send Message
+              </button>
+              <div className="absolute inset-0 bg-amber-500 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-200 origin-center -z-0"></div>
             </div>
-            <button
-              type="submit"
-              className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
-            >
-              Send Message
-            </button>
           </form>
         )}
       </div>
