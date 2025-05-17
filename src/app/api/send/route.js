@@ -27,18 +27,18 @@ export async function POST(request) {
       subject: `✨ New Portfolio Message: ${subject}`,
       reply_to: email,
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-          <h1 style="color: #6366F1; border-bottom: 2px solid #6366F1; padding-bottom: 10px;">🚀 New Portfolio Contact!</h1>
-          <div style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid #6366F1; margin: 15px 0;">
-        <p style="margin: 5px 0;"><strong style="color: #4F46E5;">From:</strong> ${email}</p>
-        <p style="margin: 5px 0;"><strong style="color: #4F46E5;">Subject:</strong> ${subject}</p>
-          </div>
-          <div style="background-color: #f3f4f6; padding: 15px; border-radius: 6px; margin-top: 15px;">
-        <h3 style="color: #4F46E5; margin-top: 0;">Message:</h3>
-        <p style="white-space: pre-wrap; line-height: 1.5;">${message}</p>
-          </div>
-          <p style="font-size: 12px; color: #6b7280; margin-top: 20px; text-align: center;">Received from your portfolio contact form</p>
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); background-color: #1c1c1c;">
+        <h1 style="color: #F59E0B; border-bottom: 2px solid #F59E0B; padding-bottom: 10px;">🚀 New Portfolio Contact!</h1>
+        <div style="background-color: #222222; padding: 15px; border-left: 4px solid #F59E0B; margin: 15px 0;">
+        <p style="margin: 5px 0; color: #f3f3f3;"><strong style="color: #FBBF24;">From:</strong> ${email}</p>
+        <p style="margin: 5px 0; color: #f3f3f3;"><strong style="color: #FBBF24;">Subject:</strong> ${subject}</p>
         </div>
+        <div style="background-color: #2a2a2a; padding: 15px; border-radius: 6px; margin-top: 15px;">
+        <h3 style="color: #F59E0B; margin-top: 0;">Message:</h3>
+        <p style="white-space: pre-wrap; line-height: 1.5; color: #f3f3f3;">${message}</p>
+        </div>
+        <p style="font-size: 12px; color: #d4d4d4; margin-top: 20px; text-align: center;">Received from your portfolio contact form</p>
+      </div>
       `,
     });
 
