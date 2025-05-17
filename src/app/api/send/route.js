@@ -7,7 +7,7 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Optional: lock this route to the Edge Runtime for speed
-export const runtime = "edge";
+// export const runtime = "edge";
 
 export async function POST(request) {
   // parse & validate body
