@@ -8,40 +8,127 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-2">
-        <li>Java</li>
-        <li>C Programming</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>ReactJS</li>
-      </ul>
+      <div className="space-y-4">
+        <div className="bg-gray-900 p-3 rounded-lg hover:shadow-md hover:shadow-amber-500/30 transition-all">
+          <p className="font-bold text-amber-400 mb-2 border-b border-amber-700 pb-1 text-lg">
+            Languages
+          </p>
+          <ul className="grid grid-cols-2 gap-x-2 gap-y-1 text-base">
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>Java
+            </li>
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>HTML
+            </li>
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>Python
+            </li>
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>CSS
+            </li>
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>C
+            </li>
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>JavaScript
+            </li>
+          </ul>
+        </div>
+
+        <div className="bg-gray-900 p-3 rounded-lg hover:shadow-md hover:shadow-amber-500/30 transition-all">
+          <p className="font-bold text-amber-400 mb-2 border-b border-amber-700 pb-1 text-lg">
+            Frameworks & Libraries
+          </p>
+          <ul className="grid grid-cols-2 gap-x-2 gap-y-1 text-base">
+            <li className="flex items-center">
+              <span className="text-yellow-400 mr-2">⟫</span>React.JS
+            </li>
+            <li className="flex items-center">
+              <span className="text-yellow-400 mr-2">⟫</span>Next.JS
+            </li>
+            <li className="flex items-center">
+              <span className="text-yellow-400 mr-2">⟫</span>Tkinter
+            </li>
+          </ul>
+        </div>
+
+        <div className="bg-gray-900 p-3 rounded-lg hover:shadow-md hover:shadow-amber-500/30 transition-all">
+          <p className="font-bold text-amber-400 mb-2 border-b border-amber-700 pb-1 text-lg">
+            Developer Tools
+          </p>
+          <ul className="grid grid-cols-2 gap-x-2 gap-y-1 text-base">
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>GitHub
+            </li>
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>Pynput
+            </li>
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>Keyboard
+            </li>
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>Threading
+            </li>
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>SolidWorks
+            </li>
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>Microsoft 365
+            </li>
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>Adobe CC
+            </li>
+          </ul>
+        </div>
+      </div>
     ),
   },
   {
     title: "Education",
     id: "education",
     content: (
-      <ul className="list-disc pl-2">
-        <li>
-          <strong>Major: </strong>
-          Computer Engineering
-        </li>
-        <li>
-          <strong>Minor: </strong>
-          Technology Entrepreneurship
-        </li>
-        <li>University of Central Florida</li>
-      </ul>
+      <div className="bg-gray-900 p-4 rounded-lg hover:shadow-md hover:shadow-amber-500/30 transition-all">
+        <h3 className="text-yellow-500 font-bold text-xl mb-2">
+          Academic Journey
+        </h3>
+        <ul className="space-y-2 text-base">
+          <li className="flex items-start">
+            <span className="text-amber-400 mr-2"> </span>
+            <div>
+              <strong className="text-yellow-300">Major: </strong>
+              <span className="text-white">Computer Engineering</span>
+            </div>
+          </li>
+          <li className="flex items-start">
+            <span className="text-amber-400 mr-2"> </span>
+            <div>
+              <strong className="text-yellow-300">Minor: </strong>
+              <span className="text-white">Technology Entrepreneurship</span>
+            </div>
+          </li>
+          <li className="flex items-start">
+            <span className="text-amber-400 mr-2"> </span>
+            <div>
+              <strong className="text-yellow-300">School: </strong>
+              <span className="text-white">University of Central Florida</span>
+            </div>
+          </li>
+        </ul>
+      </div>
     ),
   },
   {
     title: "Certifications",
     id: "certifications",
     content: (
-      <ul className="list-disc pl-2">
-        <li>None currently</li>
-      </ul>
+      <div className="bg-gray-900 p-4 rounded-lg hover:shadow-md hover:shadow-amber-500/30 transition-all">
+        <h3 className="text-amber-400 font-bold text-xl mb-2">
+          Certifications
+        </h3>
+        <p className="italic text-gray-400 text-base">
+          Coming soon! Currently focusing on building practical experience.
+        </p>
+      </div>
     ),
   },
 ];
