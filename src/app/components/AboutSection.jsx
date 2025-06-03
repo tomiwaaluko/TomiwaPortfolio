@@ -27,7 +27,7 @@ const TAB_DATA = [
               <span className="text-amber-400 mr-2">⟫</span>CSS
             </li>
             <li className="flex items-center">
-              <span className="text-amber-400 mr-2">⟫</span>C
+              <span className="text-amber-400 mr-2">⟫</span>C/C++
             </li>
             <li className="flex items-center">
               <span className="text-amber-400 mr-2">⟫</span>JavaScript
