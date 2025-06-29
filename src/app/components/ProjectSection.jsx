@@ -7,6 +7,16 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
+    title: "DigiConvo",
+    description:
+      "Built an AI-powered conversation practice platform using Next.js, TypeScript, and Google Gemini AI to help users develop emotional intelligence through realistic dialogue scenarios with real-time emotion analysis and voice integration.",
+    image: "/images/projects/digiconvo.PNG",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/tomiwaaluko/digiconvo",
+    previewUrl: "/",
+  },
+  {
+    id: 2,
     title: "New ePortfolio Website",
     description: "An ePortfolio website built with Next.js and Tailwind CSS.",
     image: "/images/projects/ePortfolio.PNG",
@@ -15,7 +25,7 @@ const projectsData = [
     previewUrl: "/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Fisch Macro",
     description:
       "A software for automatic clicking within ROBLOX's Fisch game. Made with Python.",
@@ -25,21 +35,12 @@ const projectsData = [
     previewUrl: "/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Basic ePortfolio Website",
     description: "An ePortfolio website built with HTML and CSS.",
     image: "/images/projects/htmlportfolio.PNG",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/tomiwaaluko/tomiwaaluko.github.io",
-    previewUrl: "/",
-  },
-  {
-    id: 4,
-    title: "Coming Soon",
-    description: "",
-    image: "/images/projects/comingsoon.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
     previewUrl: "/",
   },
   {
