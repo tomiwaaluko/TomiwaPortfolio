@@ -46,8 +46,9 @@ const achievementsList = [
     value: "3.5",
   },
   {
-    metric: "Executive Positions Held",
-    value: "6",
+    metric: "GitHub Contributions",
+    value: "200",
+    postfix: "+",
   },
   {
     metric: "Credit Hours Completed",

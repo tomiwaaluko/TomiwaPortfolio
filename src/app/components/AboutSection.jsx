@@ -15,22 +15,25 @@ const TAB_DATA = [
           </p>
           <ul className="grid grid-cols-2 gap-x-2 gap-y-1 text-base">
             <li className="flex items-center">
-              <span className="text-amber-400 mr-2">⟫</span>Java
-            </li>
-            <li className="flex items-center">
-              <span className="text-amber-400 mr-2">⟫</span>HTML
-            </li>
-            <li className="flex items-center">
               <span className="text-amber-400 mr-2">⟫</span>Python
             </li>
             <li className="flex items-center">
-              <span className="text-amber-400 mr-2">⟫</span>CSS
+              <span className="text-amber-400 mr-2">⟫</span>Java
             </li>
             <li className="flex items-center">
               <span className="text-amber-400 mr-2">⟫</span>C/C++
             </li>
             <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>HTML
+            </li>
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>CSS
+            </li>
+            <li className="flex items-center">
               <span className="text-amber-400 mr-2">⟫</span>JavaScript
+            </li>
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>TypeScript
             </li>
           </ul>
         </div>
@@ -47,6 +50,12 @@ const TAB_DATA = [
               <span className="text-yellow-400 mr-2">⟫</span>Next.JS
             </li>
             <li className="flex items-center">
+              <span className="text-yellow-400 mr-2">⟫</span>Tailwind CSS
+            </li>
+            <li className="flex items-center">
+              <span className="text-yellow-400 mr-2">⟫</span>tRPC
+            </li>
+            <li className="flex items-center">
               <span className="text-yellow-400 mr-2">⟫</span>Tkinter
             </li>
           </ul>
@@ -58,16 +67,39 @@ const TAB_DATA = [
           </p>
           <ul className="grid grid-cols-2 gap-x-2 gap-y-1 text-base">
             <li className="flex items-center">
-              <span className="text-amber-400 mr-2">⟫</span>GitHub
+              <span className="text-amber-400 mr-2">⟫</span>Git/GitHub
             </li>
             <li className="flex items-center">
-              <span className="text-amber-400 mr-2">⟫</span>Pynput
+              <span className="text-amber-400 mr-2">⟫</span>Vercel
             </li>
             <li className="flex items-center">
-              <span className="text-amber-400 mr-2">⟫</span>Keyboard
+              <span className="text-amber-400 mr-2">⟫</span>Postman Agent
             </li>
             <li className="flex items-center">
-              <span className="text-amber-400 mr-2">⟫</span>Threading
+              <span className="text-amber-400 mr-2">⟫</span>Resend
+            </li>
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>Prisma
+            </li>
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>Supabase
+            </li>
+          </ul>
+        </div>
+
+        <div className="bg-gray-900 p-3 rounded-lg hover:shadow-md hover:shadow-amber-500/30 transition-all">
+          <p className="font-bold text-amber-400 mb-2 border-b border-amber-700 pb-1 text-lg">
+            Technologies
+          </p>
+          <ul className="grid grid-cols-2 gap-x-2 gap-y-1 text-base">
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>REST APIs
+            </li>
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>PostgreSQL
+            </li>
+            <li className="flex items-center">
+              <span className="text-amber-400 mr-2">⟫</span>Google Gemini AI
             </li>
             <li className="flex items-center">
               <span className="text-amber-400 mr-2">⟫</span>SolidWorks
