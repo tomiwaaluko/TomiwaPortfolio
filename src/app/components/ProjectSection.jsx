@@ -18,10 +18,11 @@ const projectsData = [
   {
     id: 2,
     title: "New ePortfolio Website",
-    description: "An ePortfolio website built with Next.js and Tailwind CSS.",
+    description:
+      "Built a modern, responsive portfolio website using Next.js, React, and Tailwind CSS featuring interactive sections, smooth animations with Framer Motion, contact functionality with Resend API, and dynamic project showcases. Includes tabbed navigation for skills/education, email integration, and optimized performance with server-side rendering.",
     image: "/images/projects/ePortfolio.PNG",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/tomiwaaluko/TomiwaPortfolio",
     previewUrl: "/",
   },
   {
@@ -36,20 +37,21 @@ const projectsData = [
   },
   {
     id: 4,
+    title: "Xi Iota Chapter Website",
+    description:
+      "Developed the official website for the Xi Iota Chapter of Alpha Phi Alpha Fraternity, Inc. at UCF using React, TypeScript, and Tailwind CSS. Features chapter history, leadership profiles, Miss Black & Gold pageant information, and community service initiatives with modern animations and responsive design.",
+    image: "/images/projects/xiiota.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/tomiwaaluko/xi-iota-beacon-site",
+    previewUrl: "https://xi-iota-beacon-site.vercel.app/",
+  },
+  {
+    id: 5,
     title: "Basic ePortfolio Website",
     description: "An ePortfolio website built with HTML and CSS.",
     image: "/images/projects/htmlportfolio.PNG",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/tomiwaaluko/tomiwaaluko.github.io",
-    previewUrl: "/",
-  },
-  {
-    id: 5,
-    title: "Coming Soon",
-    description: "",
-    image: "/images/projects/comingsoon.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
     previewUrl: "/",
   },
   {
