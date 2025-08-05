@@ -209,10 +209,10 @@ npm run lint     # Run ESLint checks
 
 ## Contact
 
-- **Email**: [Your Email]
-- **LinkedIn**: [Your LinkedIn]
+- **Email**: [tomiwaaluko02@gmail.com]
+- **LinkedIn**: [[Your LinkedIn](https://www.linkedin.com/in/olatomiwaaluko/)]
 - **GitHub**: [tomiwaaluko](https://github.com/tomiwaaluko)
-- **Portfolio**: [Live Site URL]
+- **Portfolio**: [[Live Site URL](https://tomiwaaluko.com/)]
 
 ---
 
