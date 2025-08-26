@@ -17,26 +17,16 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "New ePortfolio Website",
+    title: "ApplySense",
     description:
-      "Built a modern, responsive portfolio website using Next.js, React, and Tailwind CSS featuring interactive sections, smooth animations with Framer Motion, contact functionality with Resend API, and dynamic project showcases. Includes tabbed navigation for skills/education, email integration, and optimized performance with server-side rendering.",
-    image: "/images/projects/ePortfolio.PNG",
+      "Built an AI-powered job application management platform using Next.js 15, TypeScript, and OpenAI GPT. Features automatic data extraction from job posting screenshots using OCR and AI, intuitive dashboard with progress tracking, smart deadline reminders, and secure authentication with Google OAuth. Integrated with Supabase for cloud storage and Prisma for database management.",
+    image: "/images/projects/applysense2.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/tomiwaaluko/TomiwaPortfolio",
+    gitUrl: "https://github.com/tomiwaaluko/applysense",
     previewUrl: "/",
   },
   {
     id: 3,
-    title: "Fisch Macro",
-    description:
-      "A software for automatic clicking within ROBLOX's Fisch game. Made with Python.",
-    image: "/images/projects/fisch.PNG",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/tomiwaaluko/Fisch-Macro",
-    previewUrl: "/",
-  },
-  {
-    id: 4,
     title: "Xi Iota Chapter Website",
     description:
       "Developed the official website for the Xi Iota Chapter of Alpha Phi Alpha Fraternity, Inc. at UCF using React, TypeScript, and Tailwind CSS. Features chapter history, leadership profiles, Miss Black & Gold pageant information, and community service initiatives with modern animations and responsive design.",
@@ -46,21 +36,32 @@ const projectsData = [
     previewUrl: "https://xi-iota-beacon-site.vercel.app/",
   },
   {
+    id: 4,
+    title: "Fisch Macro",
+    description:
+      "A software for automatic clicking within ROBLOX's Fisch game. Made with Python.",
+    image: "/images/projects/fisch.PNG",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/tomiwaaluko/Fisch-Macro",
+    previewUrl: "/",
+  },
+  {
     id: 5,
+    title: "New ePortfolio Website",
+    description:
+      "Built a modern, responsive portfolio website using Next.js, React, and Tailwind CSS featuring interactive sections, smooth animations with Framer Motion, contact functionality with Resend API, and dynamic project showcases. Includes tabbed navigation for skills/education, email integration, and optimized performance with server-side rendering.",
+    image: "/images/projects/ePortfolio.PNG",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/tomiwaaluko/TomiwaPortfolio",
+    previewUrl: "/",
+  },
+  {
+    id: 6,
     title: "Basic ePortfolio Website",
     description: "An ePortfolio website built with HTML and CSS.",
     image: "/images/projects/htmlportfolio.PNG",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/tomiwaaluko/tomiwaaluko.github.io",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "Coming Soon",
-    description: "",
-    image: "/images/projects/comingsoon.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
     previewUrl: "/",
   },
 ];
