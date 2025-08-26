@@ -60,6 +60,23 @@ const XMarkIcon = (props) => (
   </svg>
 );
 
+const ExternalLinkIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    {...props}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+    />
+  </svg>
+);
+
 import Link from "next/link";
 
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
@@ -123,7 +140,20 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
       </div>
       <div className="text-white rounded-b-xl mt-3 bg-[#181818] py-6 px-4">
         <h5 className="txt-xl font-semibold mb-2">{title}</h5>
-        <p className="text-[#ADB7BE]">{description}</p>
+        <p className="text-[#ADB7BE] mb-4">{description}</p>
+
+        {/* Preview Button */}
+        {previewUrl && previewUrl !== "/" && (
+          <Link
+            href={previewUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"
+          >
+            <ExternalLinkIcon className="h-4 w-4" />
+            <span>Live Preview</span>
+          </Link>
+        )}
       </div>
 
       {/* Image Expansion Modal */}

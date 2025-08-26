@@ -13,7 +13,7 @@ const projectsData = [
     image: "/images/projects/digiconvo.PNG",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/tomiwaaluko/digiconvo",
-    previewUrl: "/",
+    previewUrl: "https://digiconvo.vercel.app/",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const projectsData = [
     image: "/images/projects/applysense2.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/tomiwaaluko/applysense",
-    previewUrl: "/",
+    previewUrl: "https://jobtracker2.vercel.app/",
   },
   {
     id: 3,
@@ -62,7 +62,7 @@ const projectsData = [
     image: "/images/projects/htmlportfolio.PNG",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/tomiwaaluko/tomiwaaluko.github.io",
-    previewUrl: "/",
+    previewUrl: "https://tomiwaaluko.github.io/",
   },
 ];
 
