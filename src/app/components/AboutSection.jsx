@@ -154,12 +154,27 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <div className="bg-gray-900 p-4 rounded-lg hover:shadow-md hover:shadow-amber-500/30 transition-all">
-        <h3 className="text-amber-400 font-bold text-xl mb-2">
+        <h3 className="text-amber-400 font-bold text-xl mb-3">
           Certifications
         </h3>
-        <p className="italic text-gray-400 text-base">
-          Coming soon! Currently focusing on building practical experience.
-        </p>
+        <ul className="space-y-3 text-base">
+          <li className="flex items-start">
+            <span className="text-amber-400 mr-2">⟫</span>
+            <div>
+              <strong className="text-green-300">
+                CodePath Intermediate Technical Interview Prep
+              </strong>
+            </div>
+          </li>
+          <li className="flex items-start">
+            <span className="text-amber-400 mr-2">⟫</span>
+            <div>
+              <strong className="text-green-300">
+                CodePath Intermediate Web Development Course
+              </strong>
+            </div>
+          </li>
+        </ul>
       </div>
     ),
   },
