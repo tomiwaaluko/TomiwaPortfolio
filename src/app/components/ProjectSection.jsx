@@ -20,7 +20,7 @@ const projectsData = [
     title: "ApplySense",
     description:
       "Built an AI-powered job application management platform using Next.js 15, TypeScript, and OpenAI GPT. Features automatic data extraction from job posting screenshots using OCR and AI, intuitive dashboard with progress tracking, smart deadline reminders, and secure authentication with Google OAuth. Integrated with Supabase for cloud storage and Prisma for database management.",
-    image: "/images/projects/applysense2.png",
+    image: "/images/projects/applysense2.PNG",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/tomiwaaluko/applysense",
     previewUrl: "https://jobtracker2.vercel.app/",
